@@ -1,9 +1,10 @@
 package com.example.posbackendspring.customSatus;
 
 
-import lk.ijse.posbackend.pos_backend_spring.dto.CustomerStatus;
-import lk.ijse.posbackend.pos_backend_spring.dto.ItemStatus;
-import lk.ijse.posbackend.pos_backend_spring.dto.OrderStatus;
+
+import com.example.posbackendspring.dto.CustomerStatus;
+import com.example.posbackendspring.dto.ItemStatus;
+import com.example.posbackendspring.dto.OrderStatus;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;

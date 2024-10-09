@@ -1,10 +1,11 @@
 package com.example.posbackendspring.entity.impl;
 
+import com.example.posbackendspring.entity.SuperEntity;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
-import lk.ijse.posbackend.pos_backend_spring.entity.SuperEntity;
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;

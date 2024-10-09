@@ -1,6 +1,7 @@
 package com.example.posbackendspring.service.impl;
 
-import lk.ijse.posbackend.pos_backend_spring.service.OrderService;
+
+import com.example.posbackendspring.service.OrderService;
 
 public class OrderServiceImpl implements OrderService {
 }

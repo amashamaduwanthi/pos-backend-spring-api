@@ -1,6 +1,7 @@
 package com.example.posbackendspring.dto.impl;
 
-import lk.ijse.posbackend.pos_backend_spring.dto.ItemStatus;
+
+import com.example.posbackendspring.dto.ItemStatus;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
