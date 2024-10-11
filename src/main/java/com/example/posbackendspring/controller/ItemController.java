@@ -41,6 +41,10 @@ public class ItemController {
     }
 
 
-
+    @DeleteMapping(value = "/{itemCode}")
+    public ResponseEntity<Void> deleteCustomer(@PathVariable("itemCode") String itemCode) {
+        itemService.deleteItem(itemCode);
+        return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+    }
 
 }
