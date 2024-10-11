@@ -11,8 +11,8 @@ import lombok.NoArgsConstructor;
 @Data
 public class ItemDTO implements ItemStatus {
     private String code;
-    private String name;
     private String description;
+    private String name;
     private String qty;
     private String unitPrice;
 }
