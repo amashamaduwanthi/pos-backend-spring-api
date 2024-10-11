@@ -10,10 +10,11 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Data
 public class CustomerDTO implements CustomerStatus {
-    private String nic;
+    private String customerId;
     private String name;
     private String address;
     private String tel;
     private String regDate;
+
 
 }
