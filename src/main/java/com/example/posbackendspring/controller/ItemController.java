@@ -32,6 +32,14 @@ public class ItemController {
         return itemService.getItem(itemCode);
     }
 
+    @PutMapping(value = "/{itemCode}")
+    public ResponseEntity<Void> updateCustomer(@PathVariable("itemCode") String itemCode,
+                                               @RequestBody ItemDTO updateditemDto) {
+        //validation
+        itemService.updateItem(itemCode, updateditemDto);
+        return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+    }
+
 
 
 
