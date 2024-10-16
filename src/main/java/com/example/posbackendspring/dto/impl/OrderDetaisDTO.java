@@ -10,9 +10,9 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Data
 public class OrderDetaisDTO implements OrderDetailsStatus {
-    private String order_id;
-    private String item_id;
-    private int qty;
+    private String detailsId;
+    private OrderDTO order;
+    private ItemDTO item;
+    private int orderQty;
     private double unitPrice;
-    private double total;
 }

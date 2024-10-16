@@ -4,8 +4,12 @@ package com.example.posbackendspring.util;
 
 import com.example.posbackendspring.dto.impl.CustomerDTO;
 import com.example.posbackendspring.dto.impl.ItemDTO;
+import com.example.posbackendspring.dto.impl.OrderDTO;
+import com.example.posbackendspring.dto.impl.OrderDetaisDTO;
 import com.example.posbackendspring.entity.impl.CustomerEntity;
 import com.example.posbackendspring.entity.impl.ItemEntity;
+import com.example.posbackendspring.entity.impl.OrderDetailsEntity;
+import com.example.posbackendspring.entity.impl.OrderEntity;
 import org.modelmapper.ModelMapper;
 import org.modelmapper.TypeToken;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -41,15 +45,11 @@ public class Mapping {
     }
 
 
+    public OrderEntity toOrderEntity(OrderDTO orderDto) {
+        return modelMapper.map(orderDto, OrderEntity.class);
+    }
 
-
-
-
-
-
-
-
-
-
-
+    public OrderDetailsEntity toOrderDetailsEntity(OrderDetaisDTO orderDetailsDto) {
+        return modelMapper.map(orderDetailsDto, OrderDetailsEntity.class);
+    }
 }

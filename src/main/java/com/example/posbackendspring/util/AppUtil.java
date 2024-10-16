@@ -11,5 +11,12 @@ public class AppUtil {
     }
 
 
+    public static String generateOrderId() {
+        return "Order-"+ UUID.randomUUID();
+    }
 
+    public static String generateOrderDetailsId() {
+
+            return "Order-Details"+ UUID.randomUUID();
+    }
 }
