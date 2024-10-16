@@ -16,18 +16,15 @@ import java.time.LocalDate;
 @Table(name = "order-details")
 public class OrderDetailsEntity implements SuperEntity {
     @Id
-    private String id;
-    private LocalDate date;
-    private String customerId;
-    private String customerName;
-    private String customerAddress;
-    private String customerTel;
-    private int orderQTY;
-    private double unitPrice;
-    @ManyToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "itemCode")
-    private ItemEntity item;
-    @ManyToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "orderID")
+    private String detailsId;
+    @ManyToOne
+    @JoinColumn(name = "orderId",referencedColumnName = "orderId")
     private OrderEntity order;
+    @ManyToOne
+    @JoinColumn(name = "itemCode",referencedColumnName = "itemCode")
+    private ItemEntity item;
+    private int orderQty;
+
+    private double unitPrice;
+
 }

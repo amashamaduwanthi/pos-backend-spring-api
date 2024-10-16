@@ -21,8 +21,8 @@ public class CustomerEntity implements SuperEntity {
     private String address;
     private String tel;
     private String regDate;
-    @OneToMany(mappedBy = "customer",cascade = CascadeType.ALL)
-    private List<OrderEntity> orderList;
+//    @OneToMany(mappedBy = "customer",cascade = CascadeType.ALL)
+//    private List<OrderEntity> orderList;
 
 
 }
