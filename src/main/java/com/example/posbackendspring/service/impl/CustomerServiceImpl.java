@@ -13,6 +13,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -61,6 +62,12 @@ public class CustomerServiceImpl implements CustomerService {
         CustomerEntity customer = customerDao.getReferenceById(customerId);
 
         return customerMapping.toUserDto(customer);
+    }
+
+    @Override
+    public List<CustomerDTO> getAllCustomers() {
+        List<CustomerEntity> allCustomers = customerDao.findAll();
+        return customerMapping.asCustomerDtoList(allCustomers);
     }
 
 
