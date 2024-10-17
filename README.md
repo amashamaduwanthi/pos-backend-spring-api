@@ -17,35 +17,7 @@ This API is designed to manage the core functionalities of a Point-of-Sale (POS)
 - **Dependency Management**: Maven
 - **Java Version**: 21
 
-## API Endpoints
 
-### Customer Endpoints
-
-| Method | Endpoint                        | Description                |
-|--------|----------------------------------|----------------------------|
-| POST   | `/api/v1/customer`               | Add a new customer         |
-| GET    | `/api/v1/customer/{id}`          | Get customer by ID         |
-| PUT    | `/api/v1/customer`               | Update customer details    |
-| DELETE | `/api/v1/customer/{id}`          | Delete a customer          |
-| GET    | `/api/v1/customers`              | Get all customers          |
-
-### Item Endpoints
-
-| Method | Endpoint                        | Description                |
-|--------|----------------------------------|----------------------------|
-| POST   | `/api/v1/item`                   | Add a new item             |
-| GET    | `/api/v1/item/{id}`              | Get item details by ID     |
-| PUT    | `/api/v1/item`                   | Update item details        |
-| DELETE | `/api/v1/item/{id}`              | Delete an item             |
-| GET    | `/api/v1/items`                  | Get all items              |
-
-### Order Endpoints
-
-| Method | Endpoint                        | Description                |
-|--------|----------------------------------|----------------------------|
-| POST   | `/api/v1/order`                  | Place a new order          |
-| GET    | `/api/v1/order/{id}`             | Get order details by ID    |
-| GET    | `/api/v1/orders`                 | Get all orders             |
 
 
 ### License
