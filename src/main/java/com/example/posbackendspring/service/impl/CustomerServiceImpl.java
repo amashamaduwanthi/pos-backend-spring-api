@@ -5,7 +5,7 @@ import com.example.posbackendspring.dao.CustomerDao;
 import com.example.posbackendspring.dto.impl.CustomerDTO;
 import com.example.posbackendspring.entity.impl.CustomerEntity;
 import com.example.posbackendspring.exception.DataPersistException;
-import com.example.posbackendspring.exception.NoteNotFoundException;
+import com.example.posbackendspring.exception.CustomerNotFoundException;
 import com.example.posbackendspring.service.CustomerService;
 import com.example.posbackendspring.util.AppUtil;
 import com.example.posbackendspring.util.Mapping;
@@ -37,7 +37,7 @@ public class CustomerServiceImpl implements CustomerService {
     public void deleteCustomer(String customerId) {
         Optional<CustomerEntity> foundNote=customerDao.findById(customerId);
         if(!foundNote.isPresent()){
-            throw new NoteNotFoundException("Customer with id " + customerId + " not found");
+            throw new CustomerNotFoundException("Customer with id " + customerId + " not found");
         }else {
             customerDao.deleteById(customerId);
         }
@@ -47,7 +47,7 @@ public class CustomerServiceImpl implements CustomerService {
     public void updateCustomer(String customerId, CustomerDTO updatedCustomerDto) {
         Optional<CustomerEntity>foundCustomer=customerDao.findById(customerId);
         if(!foundCustomer.isPresent()){
-            throw new NoteNotFoundException("Customer with id " + customerId + " not found");
+            throw new CustomerNotFoundException("Customer with id " + customerId + " not found");
         }else {
             foundCustomer.get().setName(updatedCustomerDto.getName());
             foundCustomer.get().setAddress(updatedCustomerDto.getAddress());
